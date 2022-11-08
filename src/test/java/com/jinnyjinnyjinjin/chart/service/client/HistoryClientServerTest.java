@@ -1,8 +1,6 @@
 package com.jinnyjinnyjinjin.chart.service.client;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import com.jinnyjinnyjinjin.chart.service.client.response.ExternalResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,6 +20,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -31,10 +30,10 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 @Slf4j
 @SpringBootTest
-class ClientServerTest {
+class HistoryClientServerTest {
 
     @Autowired
-    ClientServer service;
+    HistoryClientServer service;
 
     @Autowired
     RestTemplate restTemplate;
@@ -47,9 +46,16 @@ class ClientServerTest {
 
     private MockRestServiceServer mockServer;
 
+    private Gson gson;
+
     @BeforeEach
     public void init() {
         mockServer = MockRestServiceServer.createServer(restTemplate);
+        gson = new GsonBuilder()
+                .registerTypeAdapter(Date.class,
+                        (JsonDeserializer<Date>)
+                                (jsonElement, type, context) -> new Date(jsonElement.getAsJsonPrimitive().getAsLong()))
+                .create();
     }
 
     @Test
@@ -58,7 +64,6 @@ class ClientServerTest {
 
         String responseTemplate = getResponseSample();
 
-        Gson gson = new Gson();
         JsonObject converted = gson.fromJson(responseTemplate, JsonElement.class).getAsJsonObject();
         ExternalResponse externalResponse = gson.fromJson(converted, ExternalResponse.class);
 
@@ -80,7 +85,6 @@ class ClientServerTest {
 
         assertNotNull(result);
         assertEquals(externalResponse, result);
-
     }
 
     private String getResponseSample() throws IOException {
