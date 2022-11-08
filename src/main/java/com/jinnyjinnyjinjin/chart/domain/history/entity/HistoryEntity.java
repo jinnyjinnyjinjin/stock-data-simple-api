@@ -14,7 +14,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Entity
 @Getter
 @NoArgsConstructor(access = PROTECTED)
-@Table(name = "FINANCE_CHART_HISTORY")
+@Table(name = "HISTORY")
 public class HistoryEntity {
 
     @Id

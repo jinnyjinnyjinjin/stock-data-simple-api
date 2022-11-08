@@ -1,8 +1,6 @@
 package com.jinnyjinnyjinjin.chart.domain.history.dto;
 
 import com.jinnyjinnyjinjin.chart.domain.history.entity.HistoryEntity;
-import com.jinnyjinnyjinjin.chart.service.history.dto.StockDto;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,11 +8,9 @@ import java.util.Date;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class HistoryDto {
 
     private Long id;
-    private StockDto stock;
     private int volume;
     private int open;
     private int low;

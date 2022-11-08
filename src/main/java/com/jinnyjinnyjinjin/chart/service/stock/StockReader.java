@@ -1,8 +1,8 @@
 package com.jinnyjinnyjinjin.chart.service.stock;
 
 import com.jinnyjinnyjinjin.chart.domain.stock.entity.StockEntity;
-import com.jinnyjinnyjinjin.chart.exception.stock.StockNotFoundException;
 import com.jinnyjinnyjinjin.chart.domain.stock.repository.StockRepository;
+import com.jinnyjinnyjinjin.chart.exception.stock.StockNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

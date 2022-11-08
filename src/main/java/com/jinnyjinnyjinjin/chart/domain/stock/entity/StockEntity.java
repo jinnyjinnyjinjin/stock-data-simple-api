@@ -1,11 +1,12 @@
 package com.jinnyjinnyjinjin.chart.domain.stock.entity;
 
-import com.jinnyjinnyjinjin.chart.domain.history.entity.HistoryEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import static javax.persistence.GenerationType.IDENTITY;
 import static lombok.AccessLevel.PROTECTED;
@@ -22,10 +23,8 @@ public class StockEntity {
 
     private String name;
 
-    @OneToMany(mappedBy = "stock")
-    private List<HistoryEntity> history;
-
     public StockEntity(String name) {
         this.name = name;
     }
+
 }

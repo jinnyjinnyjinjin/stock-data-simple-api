@@ -1,12 +1,13 @@
 package com.jinnyjinnyjinjin.chart.service.history;
 
-import com.jinnyjinnyjinjin.chart.domain.history.entity.HistoryEntity;
-import com.jinnyjinnyjinjin.chart.domain.stock.entity.StockEntity;
 import com.jinnyjinnyjinjin.chart.domain.history.dto.HistoryDto;
+import com.jinnyjinnyjinjin.chart.domain.history.entity.HistoryEntity;
 import com.jinnyjinnyjinjin.chart.domain.history.repository.HistoryAppender;
+import com.jinnyjinnyjinjin.chart.domain.stock.entity.StockEntity;
 import com.jinnyjinnyjinjin.chart.service.stock.StockReader;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class HistoryCreator {
     private final HistoryAppender historyAppender;
     private final StockReader stockReader;
 
+    @Transactional
     public void createBatch(Long stockId, List<HistoryDto> history) {
         StockEntity stock = stockReader.read(stockId);
         List<HistoryEntity> entities = new ArrayList<>();
@@ -32,7 +34,9 @@ public class HistoryCreator {
                     data.getTimestamp()
             );
             entities.add(historyEntity);
+//            stock.addHistory(historyEntity);
         });
         historyAppender.appendAll(entities);
+
     }
 }
