@@ -1,0 +1,117 @@
+{
+    "chart": {
+        "result": [
+            {
+                "meta": {
+                    "currency": "KRW",
+                    "symbol": "005930.KS",
+                    "exchangeName": "KSC",
+                    "instrumentType": "EQUITY",
+                    "firstTradeDate": 946944000,
+                    "regularMarketTime": 1667874921,
+                    "gmtoffset": 32400,
+                    "timezone": "KST",
+                    "exchangeTimezoneName": "Asia/Seoul",
+                    "regularMarketPrice": 61600.0,
+                    "chartPreviousClose": 60000.0,
+                    "priceHint": 2,
+                    "currentTradingPeriod": {
+                        "pre": {
+                            "timezone": "KST",
+                            "end": 1667865600,
+                            "start": 1667860200,
+                            "gmtoffset": 32400
+                        },
+                        "regular": {
+                            "timezone": "KST",
+                            "end": 1667887200,
+                            "start": 1667865600,
+                            "gmtoffset": 32400
+                        },
+                        "post": {
+                            "timezone": "KST",
+                            "end": 1667898000,
+                            "start": 1667887200,
+                            "gmtoffset": 32400
+                        }
+                    },
+                    "dataGranularity": "1d",
+                    "range": "5d",
+                    "validRanges": [
+                        "1d",
+                        "5d",
+                        "1mo",
+                        "3mo",
+                        "6mo",
+                        "1y",
+                        "2y",
+                        "5y",
+                        "10y",
+                        "ytd",
+                        "max"
+                    ]
+                },
+                "timestamp": [
+                    1667347200,
+                    1667433600,
+                    1667520000,
+                    1667779200,
+                    1667874921
+                ],
+                "indicators": {
+                    "quote": [
+                        {
+                            "volume": [
+                                13202919,
+                                17492162,
+                                12445841,
+                                null,
+                                9698358
+                            ],
+                            "open": [
+                                59700.0,
+                                58600.0,
+                                59100.0,
+                                null,
+                                60500.0
+                            ],
+                            "low": [
+                                59300.0,
+                                58100.0,
+                                58400.0,
+                                null,
+                                60500.0
+                            ],
+                            "high": [
+                                60000.0,
+                                59800.0,
+                                59500.0,
+                                null,
+                                61800.0
+                            ],
+                            "close": [
+                                59600.0,
+                                59200.0,
+                                59400.0,
+                                null,
+                                61600.0
+                            ]
+                        }
+                    ],
+                    "adjclose": [
+                        {
+                            "adjclose": [
+                                59600.0,
+                                59200.0,
+                                59400.0,
+                                null,
+                                61600.0
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "error": null
+    }
+}
