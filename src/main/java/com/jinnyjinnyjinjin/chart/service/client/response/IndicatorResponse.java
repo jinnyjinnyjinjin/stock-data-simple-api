@@ -1,11 +1,14 @@
 package com.jinnyjinnyjinjin.chart.service.client.response;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class IndicatorResponse {
-    private List<QuoteResponse> quote = new ArrayList<>();
+    private List<QuoteResponse> quote;
 }

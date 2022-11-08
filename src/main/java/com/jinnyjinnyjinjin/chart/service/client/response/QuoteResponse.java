@@ -1,15 +1,18 @@
 package com.jinnyjinnyjinjin.chart.service.client.response;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class QuoteResponse {
-    private List<Integer> volume = new ArrayList<>();
-    private List<Integer> open = new ArrayList<>();
-    private List<Integer> low = new ArrayList<>();
-    private List<Integer> high = new ArrayList<>();
-    private List<Integer> close = new ArrayList<>();
+    private List<Integer> volume;
+    private List<Integer> open;
+    private List<Integer> low;
+    private List<Integer> high;
+    private List<Integer> close;
 }
