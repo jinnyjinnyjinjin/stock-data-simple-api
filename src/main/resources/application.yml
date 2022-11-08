@@ -5,3 +5,15 @@ external:
   host: "https://query1.finance.yahoo.com"
   path: "/v8/finance/chart/005930.KS"
 
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        hbm2ddl:
+          auto: create
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
