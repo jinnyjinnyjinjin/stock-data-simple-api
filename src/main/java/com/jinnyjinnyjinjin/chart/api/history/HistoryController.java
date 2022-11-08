@@ -1,9 +1,9 @@
 package com.jinnyjinnyjinjin.chart.api.history;
 
-import com.jinnyjinnyjinjin.chart.api.history.client.response.ExternalResponse;
+import com.jinnyjinnyjinjin.chart.service.client.response.ExternalResponse;
 import com.jinnyjinnyjinjin.chart.service.history.dto.StockDto;
 import com.jinnyjinnyjinjin.chart.common.ApiResponse;
-import com.jinnyjinnyjinjin.chart.api.history.client.ClientServer;
+import com.jinnyjinnyjinjin.chart.service.client.ClientServer;
 import com.jinnyjinnyjinjin.chart.service.history.HistoryService;
 import com.jinnyjinnyjinjin.chart.service.stock.StockService;
 import lombok.RequiredArgsConstructor;

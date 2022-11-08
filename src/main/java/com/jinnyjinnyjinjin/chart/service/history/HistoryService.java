@@ -1,7 +1,6 @@
 package com.jinnyjinnyjinjin.chart.service.history;
 
-import com.jinnyjinnyjinjin.chart.dto.HistoryDto;
-import com.jinnyjinnyjinjin.chart.service.history.HistoryCreator;
+import com.jinnyjinnyjinjin.chart.domain.history.dto.HistoryDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

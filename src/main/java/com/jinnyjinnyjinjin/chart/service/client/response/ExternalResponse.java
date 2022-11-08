@@ -1,6 +1,6 @@
-package com.jinnyjinnyjinjin.chart.api.history.client.response;
+package com.jinnyjinnyjinjin.chart.service.client.response;
 
-import com.jinnyjinnyjinjin.chart.dto.HistoryDto;
+import com.jinnyjinnyjinjin.chart.domain.history.dto.HistoryDto;
 import lombok.Data;
 
 import java.util.ArrayList;

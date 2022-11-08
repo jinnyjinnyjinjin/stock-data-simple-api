@@ -1,7 +1,7 @@
 package com.jinnyjinnyjinjin.chart.service.history.dto;
 
 import com.jinnyjinnyjinjin.chart.domain.stock.entity.StockEntity;
-import com.jinnyjinnyjinjin.chart.dto.HistoryDto;
+import com.jinnyjinnyjinjin.chart.domain.history.dto.HistoryDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.jinnyjinnyjinjin.chart.dto;
+package com.jinnyjinnyjinjin.chart.domain.history.dto;
 
 import com.jinnyjinnyjinjin.chart.domain.history.entity.HistoryEntity;
 import com.jinnyjinnyjinjin.chart.service.history.dto.StockDto;

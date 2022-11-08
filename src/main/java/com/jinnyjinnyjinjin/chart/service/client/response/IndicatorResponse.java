@@ -1,4 +1,4 @@
-package com.jinnyjinnyjinjin.chart.api.history.client.response;
+package com.jinnyjinnyjinjin.chart.service.client.response;
 
 import lombok.Data;
 

@@ -2,7 +2,7 @@ package com.jinnyjinnyjinjin.chart.service.history;
 
 import com.jinnyjinnyjinjin.chart.domain.history.entity.HistoryEntity;
 import com.jinnyjinnyjinjin.chart.domain.stock.entity.StockEntity;
-import com.jinnyjinnyjinjin.chart.dto.HistoryDto;
+import com.jinnyjinnyjinjin.chart.domain.history.dto.HistoryDto;
 import com.jinnyjinnyjinjin.chart.domain.history.repository.HistoryAppender;
 import com.jinnyjinnyjinjin.chart.service.stock.StockReader;
 import lombok.RequiredArgsConstructor;

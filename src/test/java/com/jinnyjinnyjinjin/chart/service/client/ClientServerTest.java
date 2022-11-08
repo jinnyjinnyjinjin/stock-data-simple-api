@@ -1,10 +1,9 @@
-package com.jinnyjinnyjinjin.chart.service;
+package com.jinnyjinnyjinjin.chart.service.client;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.jinnyjinnyjinjin.chart.api.history.client.ClientServer;
-import com.jinnyjinnyjinjin.chart.api.history.client.response.ExternalResponse;
+import com.jinnyjinnyjinjin.chart.service.client.response.ExternalResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,6 +1,6 @@
-package com.jinnyjinnyjinjin.chart.api.history.client;
+package com.jinnyjinnyjinjin.chart.service.client;
 
-import com.jinnyjinnyjinjin.chart.api.history.client.response.ExternalResponse;
+import com.jinnyjinnyjinjin.chart.service.client.response.ExternalResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
