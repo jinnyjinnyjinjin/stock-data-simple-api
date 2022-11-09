@@ -1,6 +1,3 @@
-server:
-  port: 8090
-
 external:
   host: "https://query1.finance.yahoo.com"
   path: "/v8/finance/chart/005930.KS"
