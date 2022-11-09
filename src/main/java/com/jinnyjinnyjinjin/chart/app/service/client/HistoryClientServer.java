@@ -1,9 +1,9 @@
 package com.jinnyjinnyjinjin.chart.app.service.client;
 
-import com.jinnyjinnyjinjin.chart.app.service.client.response.ExternalResponse;
-import com.jinnyjinnyjinjin.chart.storage.domain.history.dto.HistoryDto;
 import com.jinnyjinnyjinjin.chart.app.service.client.response.BodyResponse;
+import com.jinnyjinnyjinjin.chart.app.service.client.response.ExternalResponse;
 import com.jinnyjinnyjinjin.chart.app.service.client.response.QuoteResponse;
+import com.jinnyjinnyjinjin.chart.storage.domain.history.dto.HistoryDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,9 +13,11 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
@@ -56,7 +58,7 @@ public class HistoryClientServer {
     private List<HistoryDto> parseToDto(ExternalResponse response) {
         List<BodyResponse> bodyResponses = response.getChart().getResult();
 
-        List<Date> timestampList = bodyResponses.stream()
+        List<Long> timestampList = bodyResponses.stream()
                 .flatMap(data -> data.getTimestamp().stream())
                 .collect(toList());
 
@@ -80,10 +82,15 @@ public class HistoryClientServer {
                             data.getLow().get(i),
                             data.getHigh().get(i),
                             data.getClose().get(i),
-                            timestampList.get(i)
+                            convertDatetime(timestampList.get(i))
                     )).forEach(historyDtoList::add);
         });
 
         return historyDtoList;
+
+    }
+
+    private LocalDateTime convertDatetime(Long timestamp) {
+        return LocalDateTime.ofInstant(Instant.ofEpochSecond(timestamp), TimeZone.getDefault().toZoneId());
     }
 }

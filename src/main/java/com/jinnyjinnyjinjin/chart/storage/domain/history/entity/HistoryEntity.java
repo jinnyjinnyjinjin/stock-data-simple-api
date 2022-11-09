@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.IDENTITY;
@@ -35,7 +35,7 @@ public class HistoryEntity {
 
     private int high;
 
-    private Date timestamp;
+    private LocalDateTime timestamp;
 
     protected HistoryEntity(StockEntity stock,
                             int low,
@@ -43,7 +43,7 @@ public class HistoryEntity {
                             int close,
                             int volume,
                             int high,
-                            Date timestamp) {
+                            LocalDateTime timestamp) {
         this.stock = stock;
         this.low = low;
         this.open = open;
@@ -59,7 +59,7 @@ public class HistoryEntity {
                                        int close,
                                        int volume,
                                        int high,
-                                       Date timestamp) {
+                                       LocalDateTime timestamp) {
         return new HistoryEntity(
                 stock,
                 low,

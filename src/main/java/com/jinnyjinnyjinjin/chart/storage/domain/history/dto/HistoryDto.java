@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -18,9 +18,9 @@ public class HistoryDto {
     private int low;
     private int high;
     private int close;
-    private Date timestamp;
+    private LocalDateTime timestamp;
 
-    public HistoryDto(int volume, int open, int low, int high, int close, Date timestamp) {
+    public HistoryDto(int volume, int open, int low, int high, int close, LocalDateTime timestamp) {
         this.volume = volume;
         this.open = open;
         this.low = low;
@@ -29,7 +29,7 @@ public class HistoryDto {
         this.timestamp = timestamp;
     }
 
-    public HistoryDto(Long id, int volume, int open, int low, int high, int close, Date timestamp) {
+    public HistoryDto(Long id, int volume, int open, int low, int high, int close, LocalDateTime timestamp) {
         this.id = id;
         this.volume = volume;
         this.open = open;
