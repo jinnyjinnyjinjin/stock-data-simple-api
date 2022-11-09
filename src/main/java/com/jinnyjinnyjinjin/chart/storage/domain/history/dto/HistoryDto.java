@@ -2,12 +2,14 @@ package com.jinnyjinnyjinjin.chart.storage.domain.history.dto;
 
 import com.jinnyjinnyjinjin.chart.storage.domain.history.entity.HistoryEntity;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class HistoryDto {
 
     private Long id;

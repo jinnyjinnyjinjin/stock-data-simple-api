@@ -1,15 +1,15 @@
 package com.jinnyjinnyjinjin.chart.storage.domain.history.dto;
 
+import com.jinnyjinnyjinjin.chart.app.service.history.dto.StockDto;
 import com.jinnyjinnyjinjin.chart.storage.domain.history.entity.HistoryEntity;
 import com.jinnyjinnyjinjin.chart.storage.domain.stock.entity.StockEntity;
-import com.jinnyjinnyjinjin.chart.app.service.history.dto.StockDto;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Getter
+@Data
 @AllArgsConstructor
 public class StockHistoryDto {
     private StockDto stock;

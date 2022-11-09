@@ -3,8 +3,12 @@ package com.jinnyjinnyjinjin.chart.app.service.history.dto;
 import com.jinnyjinnyjinjin.chart.storage.domain.stock.entity.StockEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
 public class StockDto {
 

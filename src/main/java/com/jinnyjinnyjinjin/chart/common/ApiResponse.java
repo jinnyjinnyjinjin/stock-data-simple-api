@@ -1,10 +1,8 @@
 package com.jinnyjinnyjinjin.chart.common;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 
-@AllArgsConstructor
-@Getter
+@Data
 public class ApiResponse {
 
     private boolean success;

@@ -8,4 +8,8 @@ public class StockNotFoundException extends RuntimeException {
         super(message);
         this.field = filed;
     }
+
+    public StockNotFoundException(String message) {
+        super(message);
+    }
 }
